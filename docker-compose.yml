@@ -1,0 +1,13 @@
+services:
+  ruby:
+    image: ruby:3.3
+    working_dir: /app
+    volumes:
+      - .:/app
+      - gems:/usr/local/bundle
+    entrypoint: ["ruby"]
+    stdin_open: true
+    tty: true
+
+volumes:
+  gems:
